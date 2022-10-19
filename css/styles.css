@@ -1,5 +1,10 @@
 body {
   font-family: "Source Code Pro", monospace;
+  background-color: #1B2430;
+  color: #a4b494;
+  margin: 0;
+  padding: 0;  
+  height: 100vh;
 }
 
 h1 {
@@ -18,8 +23,12 @@ A4B494 - verde chiaro
 
 */
 
-.navbar {
+/* .navbar {
   background-color: #382933;
+} */
+
+section {
+  height: 100%;
 }
 
 .navbar-brand {
@@ -39,17 +48,14 @@ A4B494 - verde chiaro
 .header {
   /* background-image: url("https://wallup.net/wp-content/uploads/2019/09/848918-landscape-mountain-forest-sky-slovenia-spruce-clouds.jpg"); */
   background-image: url(/images/landscape.jpg);
-  font-size: 120px;
-  padding: 8% 10% 8% 55%;
+  font-size: 5em;
+  padding: 20% 10% 8% 60%;
   font-weight: bold;
 }
-
-.header-text {
-  padding: 50%, 50%, 0, 0;
-}
-
+/*
 .about {
-  background-color: #3b5249;
+  height: 100vh;
+  width: 100vw;
 }
 
 .skills {
@@ -58,7 +64,7 @@ A4B494 - verde chiaro
 
 .contacts {
   background-color: #382933;
-}
+} */
 
 .wrapper {
   /*This part is important for centering*/
