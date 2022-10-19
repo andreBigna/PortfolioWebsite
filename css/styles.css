@@ -3,14 +3,19 @@ body {
   background-color: #1B2430;
   color: #a4b494;
   margin: 0;
-  padding: 0;  
+  padding: 0;
   height: 100vh;
 }
 
-h1 {
-  font-weight: 900;
+h2 {
+  font-weight: 600;
   font-size: 3rem;
   line-height: 1.5;
+}
+
+hr {
+  color: white;
+  margin: 50px 0px;
 }
 
 /* 
@@ -31,6 +36,12 @@ section {
   height: 100%;
 }
 
+.navbar {
+  background-color: #1B2430;
+  position: fixed;
+  width: 100%;
+}
+
 .navbar-brand {
   font-family: "Press Start 2P";
   padding-left: 1%;
@@ -41,10 +52,6 @@ section {
   font-weight: bold;
 }
 
-.container {
-  padding: 2% 8%;
-}
-
 .header {
   /* background-image: url("https://wallup.net/wp-content/uploads/2019/09/848918-landscape-mountain-forest-sky-slovenia-spruce-clouds.jpg"); */
   background-image: url(/images/landscape.jpg);
@@ -52,28 +59,15 @@ section {
   padding: 20% 10% 8% 60%;
   font-weight: bold;
 }
-/*
-.about {
-  height: 100vh;
-  width: 100vw;
-}
-
-.skills {
-  background-color: #a4b494;
-}
-
-.contacts {
-  background-color: #382933;
-} */
 
 .wrapper {
   /*This part is important for centering*/
   display: grid;
 }
 
-.typing-demo {
+.typing {
   width: 9ch;
-  animation: typing 2s steps(9), blink 0.5s step-end infinite alternate;
+  animation: typing 1s steps(9), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -90,3 +84,25 @@ section {
     border-color: transparent;
   }
 }
+
+
+.other-sections {
+  height: auto;
+  margin: 2% 15%;
+  text-align: center;
+  line-height: 2;
+  position: relative;
+}
+
+.about {
+  font-size: 1.5em;
+}
+
+/*
+.skills {
+  background-color: #a4b494;
+}
+
+.contacts {
+  background-color: #382933;
+} */
