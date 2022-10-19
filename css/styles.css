@@ -1,0 +1,86 @@
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* 
+
+382933 - marrone scuro
+3B5249 - verde scuro
+519872 - verde
+A4B494 - verde chiaro
+
+
+*/
+
+.navbar {
+  background-color: #382933;
+}
+
+.navbar-brand {
+  font-family: "Press Start 2P";
+  padding-left: 1%;
+}
+
+.nav-item {
+  padding-right: 1.5rem;
+  font-weight: bold;
+}
+
+.container {
+  padding: 2% 8%;
+}
+
+.header {
+  /* background-image: url("https://wallup.net/wp-content/uploads/2019/09/848918-landscape-mountain-forest-sky-slovenia-spruce-clouds.jpg"); */
+  background-image: url(/images/landscape.jpg);
+  font-size: 120px;
+  padding: 8% 10% 8% 55%;
+  font-weight: bold;
+}
+
+.header-text {
+  padding: 50%, 50%, 0, 0;
+}
+
+.about {
+  background-color: #3b5249;
+}
+
+.skills {
+  background-color: #a4b494;
+}
+
+.contacts {
+  background-color: #382933;
+}
+
+.wrapper {
+  /*This part is important for centering*/
+  display: grid;
+}
+
+.typing-demo {
+  width: 9ch;
+  animation: typing 2s steps(9), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
