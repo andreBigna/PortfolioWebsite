@@ -1,11 +1,12 @@
 .dashboard {
-    display: flex;
+    padding: 0% 10%;
+    text-align: center;
 }
 
 svg {
     width: 114px;
     height: 114px;
-    margin: 1em;
+    margin: 2em;
 }
 
 .bg {
