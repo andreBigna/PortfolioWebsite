@@ -65,6 +65,25 @@ function init() {
     let size = Math.random() * 5 + 1;
     let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
     let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
-    let directionX = Math.random() * 5;
+    let directionX = Math.random() * 5 - 2.5;
+    let directiony = Math.random() * 5 - 2.5;
+
+    particlesArray.push(
+      new Particle(x, y, directionX, directiony, size, "#a4b494")
+    );
   }
 }
+
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+  for (let i = 0; i < particlesArray.length; i++) {
+    particlesArray[i].update();
+  }
+}
+
+init();
+animate();
+
+//https://www.youtube.com/watch?v=d620nV6bp0A
