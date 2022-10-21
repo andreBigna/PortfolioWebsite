@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Element Sample</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/progress-bars.css" />
+
+    <!-- include the polyfill for custom elements for browsers that don't support yet -->
+    <script src="../polyfills/webcomponents-lite.js"></script>
+
+    <script>
+      class SkillBar extends HTMLElement {
+        constructor() {
+          super(); // always call super() first
+        }
+
+        connectedCallback() {
+          console.log("Custom square element added to page.");
+          updateHtml(this);
+        }
+
+        get percentage() {
+          return this.hasAttribute("percentage");
+        }
+
+        set percentage(val) {
+          this.setAttribute("percentage", val);
+        }
+
+        get text() {
+          return this.hasAttribute("text");
+        }
+
+        set text(val) {
+          this.setAttribute("text", val);
+        }
+      }
+
+      customElements.define("skill-bar", SkillBar);
+
+      function updateHtml(elem) {
+        elem.innerHTML =
+          `<svg>
+        <circle class='bg' cx='57' cy='57' r='52' />
+        <circle class='meter-1' cx='57' cy='57' r='52' />
+        <text fill='#FFFFFF' font-size='18' x='35' y='60'>` +
+          elem.getAttribute("text") +
+          ` 
+        </text>
+        </svg>`;
+      }
+    </script>
+  </head>
+
+  <!--  -->
+
+  <body>
+    <skill-bar text="prova" />
+    <skill-bar text="prova 2" />
+    <skill-bar text="prova 3" />
+    <skill-bar text="prova 4" />
+  </body>
+</html>
