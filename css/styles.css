@@ -18,20 +18,6 @@ hr {
   margin: 50px 0px;
 }
 
-/* 
-
-382933 - marrone scuro
-3B5249 - verde scuro
-519872 - verde
-A4B494 - verde chiaro
-
-
-*/
-
-/* .navbar {
-  background-color: #382933;
-} */
-
 section {
   height: 100%;
 }
@@ -85,24 +71,54 @@ section {
   }
 }
 
-
 .other-sections {
   height: auto;
-  margin: 2% 15%;
+  margin: 3% 15%;
   text-align: center;
   line-height: 2;
   position: relative;
 }
 
 .about {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-/*
 .skills {
-  background-color: #a4b494;
+  font-size: 1.2em;
 }
 
 .contacts {
-  background-color: #382933;
-} */
+  font-size: 1.2em;
+  padding: 0%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+#contacts {
+  text-align: center;
+}
+
+.footer-image {
+  padding: 3% 5%;
+  margin-bottom: 2%;
+  color: #a4b494;
+}
+
+.footer-image:hover {
+  color: #6b7562;
+
+}

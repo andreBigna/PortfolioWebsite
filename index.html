@@ -27,6 +27,10 @@
     <script src="/polyfills/webcomponents-lite.js"></script>
     <script src="/JS/skillBar.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cbda6501c9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -62,32 +66,58 @@
         <span class="typing">Hi there!</span>
       </div>
     </section>
+    <hr />
 
     <section id="about" class="about other-sections">
-      <hr />
-      <h2>About me</h2>
-      <em
-        >Hi, I'm Andrea Bignardi. I work in software development since 2009 and,
-        over the years, I had the chance to see all the SDLC. I also had
-        experience with many types of companies, from small startups to big
-        corporates with enterprise solutions. I like to constantly improve my
-        knowledge in software development, and experiment with new ideas on new
-        projects. Check out my skills, past experiences and contact me if you
-        wish.
-      </em>
-    </section>
-
-    <section id="skills" class="skills other-sections">
-      <hr />
-      <h2>Technical skills</h2>
-      <div class="dashboard">
-        <skill-bar text="C#" percentage="90"></skill-bar>
+      <h2 class="content">About me</h2>
+      <div class="content">
+        <em
+          >Hi, I'm Andrea Bignardi. I work in software development since 2009
+          and, over the years, I had the chance to see all the SDLC. I also had
+          experience with many types of companies, from small startups to big
+          corporates with enterprise solutions. I like to constantly improve my
+          knowledge in software development, and experiment with new ideas on
+          new projects. Check out my skills, past experiences and contact me if
+          you wish (full infos on my LinkedIn page).
+        </em>
       </div>
     </section>
+    <hr />
 
-    <section id="contacts" class="contacts">
-      <div class="container">
-        <div>CONTACTS</div>
+    <section id="skills" class="skills other-sections">
+      <h2>Technical skills</h2>
+      <div class="content">
+        <skill-bar text="C#" percentage="90"></skill-bar>
+        <skill-bar text=".NET" percentage="90"></skill-bar>
+        <skill-bar text="Express" percentage="70"></skill-bar>
+        <skill-bar text="Python" percentage="60"></skill-bar>
+        <skill-bar text="SQL" percentage="90"></skill-bar>
+        <skill-bar text="JS" percentage="70"></skill-bar>
+        <skill-bar text="HTML" percentage="70"></skill-bar>
+        <skill-bar text="CSS" percentage="60"></skill-bar>
+        <skill-bar text="OOP" percentage="90"></skill-bar>
+        <skill-bar text="TDD" percentage="70"></skill-bar>
+        <skill-bar text="SOLID" percentage="80"></skill-bar>
+        <skill-bar text="Patterns" percentage="80"></skill-bar>
+      </div>
+    </section>
+    <hr />
+
+    <section id="contacts" class="contacts other-sections">
+      <h2>Contacts</h2>
+      <div class="content">
+        <a
+          class="fa-brands fa-linkedin fa-7x footer-image"
+          href="https://www.linkedin.com/in/andrea-bignardi-ab9300b3/"
+        ></a>
+        <a
+          class="fa-brands fa-github fa-7x footer-image"
+          href="https://github.com/andreBigna"
+        ></a>
+        <a
+          class="fa-brands fa-facebook fa-7x footer-image"
+          href="https://www.facebook.com/andrea.w.bignardi/"
+        ></a>
       </div>
     </section>
 

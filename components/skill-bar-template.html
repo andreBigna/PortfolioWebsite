@@ -1,18 +1,13 @@
 <template>
   <style>
     svg {
-      width: 114px;
-      height: 114px;
+      width: 171px;
+      height: 171px;
       margin: 2em;
     }
 
     text {
       fill: #a4b494;
-      text-align: center;
-    }
-
-    .dashboard {
-      padding: 0% 10%;
       text-align: center;
     }
 
@@ -28,26 +23,30 @@
       stroke-linecap: round;
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
-      stroke: rgb(19, 255, 90);
       stroke-dasharray: 360;
     }
 
     .meter-90 {
+      stroke: rgb(5, 255, 90);
       stroke-dashoffset: 80%;
       animation: progress-90 1s ease-out;
     }
 
     .meter-80 {
+      stroke: rgb(120, 255, 90);
+
       stroke-dashoffset: 100%;
       animation: progress-80 1s ease-out;
     }
 
     .meter-70 {
+      stroke: rgb(160, 255, 90);
       stroke-dashoffset: 120%;
       animation: progress-70 1s ease-out;
     }
 
     .meter-60 {
+      stroke: rgb(200, 255, 90);
       stroke-dashoffset: 140%;
       animation: progress-60 1s ease-out;
     }
@@ -93,8 +92,8 @@
     }
   </style>
   <svg>
-    <circle class="bg" cx="57" cy="57" r="52" />
-    <circle id="skill-bar" class="meter-90" cx="57" cy="57" r="52" />
+    <circle class="bg" cx="85." cy="85." r="78" />
+    <circle id="skill-bar" class="meter-90" cx="85." cy="85." r="78" />
     <text
       id="skill-text"
       x="50%"
