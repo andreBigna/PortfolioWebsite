@@ -8,13 +8,29 @@ let particlesArray;
 let mouse = {
   x: null,
   y: null,
-  radius: (canvas.height / 80) * (canvas.width / 80),
+  radius: calculateMouseRadius(),
 };
 
 window.addEventListener("mousemove", (event) => {
   mouse.x = event.x;
   mouse.y = event.y;
 });
+
+window.addEventListener("mouseout", () => {
+  mouse.x = undefined;
+  mouse.y = undefined;
+});
+
+window.addEventListener("resize", () => {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+  canvas.radius = calculateMouseRadius();
+  init();
+});
+
+function calculateMouseRadius() {
+  return Math.pow(canvas.height / 100, 2);
+}
 
 class Particle {
   constructor(x, y, directionX, directionY, size, color) {
@@ -87,6 +103,29 @@ function animate() {
 
   for (let i = 0; i < particlesArray.length; i++) {
     particlesArray[i].update();
+  }
+
+  connect();
+}
+
+function connect() {
+  let opacity = 1;
+  for (let i = 0; i < particlesArray.length; i++) {
+    for (let k = i; k < particlesArray.length; k++) {
+      let distance =
+        Math.pow(particlesArray[i].x - particlesArray[k].x, 2) +
+        Math.pow(particlesArray[i].y - particlesArray[k].y, 2);
+
+      if (distance < Math.pow(canvas.width / 10, 2)) {
+        opacity = 1 - distance / 20000;
+        ctx.strokeStyle = `rgb(164, 180, 148, ${opacity})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+        ctx.lineTo(particlesArray[k].x, particlesArray[k].y);
+        ctx.stroke();
+      }
+    }
   }
 }
 
