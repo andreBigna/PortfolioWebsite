@@ -7,14 +7,12 @@
 #canvas1 {
   height: 100%;
   width: 100%;
-  background: radial-gradient(#1B2430, #6b7562);
-  z-index: 0;
-
+  /* background: radial-gradient(#1B2430, #6b7562); */
 }
 
 body {
   font-family: "Source Code Pro", monospace;
-  background-color: #1B2430;
+  background-color: #1b2430;
   color: #a4b494;
   margin: 0;
   padding: 0;
@@ -37,7 +35,7 @@ section {
 }
 
 .navbar {
-  background-color: #1B2430;
+  background-color: #1b2430;
   width: 100%;
 }
 
@@ -52,11 +50,7 @@ section {
 }
 
 .header {
-  background-image: url(/images/landscape.jpg);
-  font-size: 5em;
-  padding: 20% 10% 8% 60%;
-  font-weight: bold;
-  background-repeat: no-repeat;
+  position: relative;
 }
 
 .wrapper {
@@ -65,12 +59,18 @@ section {
 }
 
 .typing {
-  width: 9ch;
-  animation: typing 1s steps(9), blink 0.5s step-end infinite alternate;
+  margin: 0;
+  padding: 0;
+  width: 7ch;
+  font-size: 5em;
+  animation: typing 0.8s steps(7), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  position: relative;
+  top: 42%;
+  left: 42%;
+  position: absolute;
+  z-index: 100;
 }
 
 @keyframes typing {
@@ -134,23 +134,24 @@ a:active {
 
 .footer-image:hover {
   color: #6b7562;
-
 }
 
-
-@media screen and (max-width: 1000px) {
-  .header {
-    font-size: 3em;
-    text-align: center;
-  }
-
+@media screen and (max-width: 800px) {
   body {
     height: 50vh;
-
   }
 
-}
+  .typing {
+    font-size: 3em;
+    left: 25%;
+    top: 25%;
+  }
 
+  #canvas1 {
+    height: 40%;
+    width: fit-content;
+  }
+}
 
 .se-pre-con {
   position: fixed;
