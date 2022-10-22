@@ -42,19 +42,26 @@ class Particle {
     let dy = mouse.y - this.y;
     let distance = Math.sqrt(dx * dx + dy * dy);
     if (distance < mouse.radius + this.size) {
-      this.x = randomMovement();
-      this.y = randomMovement();
+      if (mouse.x < this.x && mouse.x < canvas.width - this.size * 10) {
+        this.x += 10;
+      }
+
+      if (mouse.x > this.x && this.x > this.size * 10) {
+        this.x -= 10;
+      }
+
+      if (mouse.y < this.y && mouse.y < canvas.height - this.size * 10) {
+        this.y += 10;
+      }
+
+      if (mouse.y > this.y && this.y > this.size * 10) {
+        this.y -= 10;
+      }
     }
 
     this.x += this.directionX;
     this.y += this.directionY;
     this.draw();
-  }
-
-  randomMovement() {
-    min = -10;
-    max = 10;
-    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
 
