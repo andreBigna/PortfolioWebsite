@@ -151,6 +151,15 @@ a:active {
     height: 40%;
     width: fit-content;
   }
+
+  .other-sections {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .about {
+    font-size: medium;
+  }
 }
 
 .se-pre-con {
