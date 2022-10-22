@@ -1,0 +1,105 @@
+<template>
+  <style>
+    svg {
+      width: 171px;
+      height: 171px;
+      margin: 2em;
+    }
+
+    text {
+      fill: #a4b494;
+      text-align: center;
+    }
+
+    .bg {
+      fill: none;
+      stroke-width: 10px;
+      stroke: #1a2c34;
+    }
+
+    [class^="meter-"] {
+      fill: none;
+      stroke-width: 10px;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      stroke-dasharray: 360%;
+    }
+
+    .meter-90 {
+      stroke: rgb(5, 255, 90);
+      stroke-dashoffset: 110%;
+      animation: progress-90 1s ease-out;
+    }
+
+    .meter-80 {
+      stroke: rgb(120, 255, 90);
+
+      stroke-dashoffset: 140%;
+      animation: progress-80 1s ease-out;
+    }
+
+    .meter-70 {
+      stroke: rgb(160, 255, 90);
+      stroke-dashoffset: 150%;
+      animation: progress-70 1s ease-out;
+    }
+
+    .meter-60 {
+      stroke: rgb(200, 255, 90);
+      stroke-dashoffset: 180%;
+      animation: progress-60 1s ease-out;
+    }
+
+    @keyframes progress-90 {
+      from {
+        stroke-dashoffset: 360%;
+      }
+
+      to {
+        stroke-dashoffset: 110%;
+      }
+    }
+
+    @keyframes progress-80 {
+      from {
+        stroke-dashoffset: 360%;
+      }
+
+      to {
+        stroke-dashoffset: 140%;
+      }
+    }
+
+    @keyframes progress-70 {
+      from {
+        stroke-dashoffset: 360%;
+      }
+
+      to {
+        stroke-dashoffset: 150%;
+      }
+    }
+
+    @keyframes progress-60 {
+      from {
+        stroke-dashoffset: 360%;
+      }
+
+      to {
+        stroke-dashoffset: 180%;
+      }
+    }
+  </style>
+  <svg>
+    <circle class="bg" cx="85" cy="85" r="78" />
+    <circle id="skill-bar" class="meter-90" cx="85" cy="85" r="78" />
+    <text
+      id="skill-text"
+      x="50%"
+      y="50%"
+      dominant-baseline="middle"
+      text-anchor="middle"
+    ></text>
+  </svg>
+</template>

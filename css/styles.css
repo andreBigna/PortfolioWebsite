@@ -1,25 +1,42 @@
-body {
-  font-family: "Source Code Pro", monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-weight: 900;
+#canvas1 {
+  height: 100%;
+  width: 100%;
+  /* background: radial-gradient(#1B2430, #6b7562); */
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: #1b2430;
+  color: #a4b494;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h2 {
+  font-weight: 600;
   font-size: 3rem;
   line-height: 1.5;
 }
 
-/* 
+hr {
+  color: white;
+  margin: 50px 0px;
+}
 
-382933 - marrone scuro
-3B5249 - verde scuro
-519872 - verde
-A4B494 - verde chiaro
-
-
-*/
+section {
+  height: 100%;
+}
 
 .navbar {
-  background-color: #382933;
+  background-color: #1b2430;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -32,32 +49,8 @@ A4B494 - verde chiaro
   font-weight: bold;
 }
 
-.container {
-  padding: 2% 8%;
-}
-
 .header {
-  /* background-image: url("https://wallup.net/wp-content/uploads/2019/09/848918-landscape-mountain-forest-sky-slovenia-spruce-clouds.jpg"); */
-  background-image: url(/images/landscape.jpg);
-  font-size: 120px;
-  padding: 8% 10% 8% 55%;
-  font-weight: bold;
-}
-
-.header-text {
-  padding: 50%, 50%, 0, 0;
-}
-
-.about {
-  background-color: #3b5249;
-}
-
-.skills {
-  background-color: #a4b494;
-}
-
-.contacts {
-  background-color: #382933;
+  position: relative;
 }
 
 .wrapper {
@@ -65,12 +58,19 @@ A4B494 - verde chiaro
   display: grid;
 }
 
-.typing-demo {
-  width: 9ch;
-  animation: typing 2s steps(9), blink 0.5s step-end infinite alternate;
+.typing {
+  margin: 0;
+  padding: 0;
+  width: 7ch;
+  font-size: 5em;
+  animation: typing 0.8s steps(7), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
+  top: 42%;
+  left: 42%;
+  position: absolute;
+  z-index: 100;
 }
 
 @keyframes typing {
@@ -83,4 +83,91 @@ A4B494 - verde chiaro
   50% {
     border-color: transparent;
   }
+}
+
+.other-sections {
+  height: auto;
+  margin: 3% 15%;
+  text-align: center;
+  line-height: 2;
+  position: relative;
+}
+
+.about {
+  font-size: 2em;
+}
+
+.skills {
+  font-size: 1.2em;
+}
+
+.contacts {
+  font-size: 1.2em;
+  padding: 0%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+#contacts {
+  text-align: center;
+}
+
+.footer-image {
+  padding: 3% 5%;
+  margin-bottom: 2%;
+  color: #a4b494;
+}
+
+.footer-image:hover {
+  color: #6b7562;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: 50vh;
+  }
+
+  .typing {
+    font-size: 3em;
+    left: 25%;
+    top: 25%;
+  }
+
+  #canvas1 {
+    height: 40%;
+    width: fit-content;
+  }
+
+  .other-sections {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .about {
+    font-size: medium;
+  }
+}
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(/gif/preloader.gif) center no-repeat #a4b494;
 }
