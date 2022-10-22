@@ -29,7 +29,7 @@ window.addEventListener("resize", () => {
 });
 
 function calculateMouseRadius() {
-  return Math.pow(canvas.height / 100, 2);
+  return Math.pow(canvas.height / 80, 2);
 }
 
 class Particle {
@@ -116,7 +116,7 @@ function connect() {
         Math.pow(particlesArray[i].x - particlesArray[k].x, 2) +
         Math.pow(particlesArray[i].y - particlesArray[k].y, 2);
 
-      if (distance < Math.pow(canvas.width / 10, 2)) {
+      if (distance < Math.pow(canvas.width / 5, 2)) {
         opacity = 1 - distance / 20000;
         ctx.strokeStyle = `rgb(164, 180, 148, ${opacity})`;
         ctx.lineWidth = 1;
