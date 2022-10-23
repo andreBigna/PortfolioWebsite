@@ -146,7 +146,7 @@ a:active {
   background: url(/gif/preloader.gif) center no-repeat #a4b494;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   body {
     height: 50vh;
   }
@@ -154,7 +154,7 @@ a:active {
   .typing {
     font-size: 3em;
     left: 25%;
-    top: 25%;
+    top: 50%;
   }
 
   #canvas1 {

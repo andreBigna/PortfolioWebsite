@@ -25,10 +25,6 @@ class SkillBar extends HTMLElement {
         "class",
         "meter-" + this.getAttribute("percentage")
       );
-
-      // let cssClass = skillBar.classList[0];
-      // skillBar.classList.remove(cssClass);
-      // skillBar.classList.add(cssClass);
       console.log("scrolling...");
     });
   }
@@ -54,9 +50,6 @@ customElements.define("skill-bar", SkillBar);
 
 function updateContent(elem, shadow) {
   shadow.getElementById("skill-text").textContent = elem.getAttribute("text");
-  // shadow
-  //   .getElementById("skill-bar")
-  //   .setAttribute("class", "meter-" + elem.getAttribute("percentage"));
 }
 
 function isScrolledIntoView(elem) {
@@ -68,13 +61,3 @@ function isScrolledIntoView(elem) {
 
   return elemBottom <= docViewBottom && elemTop >= docViewTop;
 }
-
-// listen for scroll event
-// $(window).scroll(function () {
-//   // check if element is scrolled into view
-//   if (isScrolledIntoView($('#skill-bar'))) {
-//     // element is scrolled into view, add animation class
-//     $('#skill-bar').clas
-//     $('#skill-bar').addClass('animation');
-//   }
-// });
