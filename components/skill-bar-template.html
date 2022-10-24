@@ -51,6 +51,10 @@
       animation: progress-60 1s ease-out;
     }
 
+    .meter-0 {
+      stroke-dashoffset: 360%;
+    }
+
     @keyframes progress-90 {
       from {
         stroke-dashoffset: 360%;
@@ -93,7 +97,7 @@
   </style>
   <svg>
     <circle class="bg" cx="85" cy="85" r="78" />
-    <circle id="skill-bar" cx="85" cy="85" r="78" />
+    <circle id="skill-bar" class="meter-0" cx="85" cy="85" r="78" />
     <text
       id="skill-text"
       x="50%"
