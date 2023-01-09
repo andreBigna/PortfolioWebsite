@@ -115,7 +115,6 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
 }
 
 a:link {
@@ -201,5 +200,9 @@ a:active {
 
   .about {
     font-size: medium;
+  }
+
+  .contacts-content {
+    flex-direction: column;
   }
 }
